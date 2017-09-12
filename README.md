@@ -1,4 +1,5 @@
-#Minecraft-Pi Ruby
+#Minecraft-rb
+
 
 ##Please note
 This project is still in the early stages of development. It is not ready for use
@@ -18,7 +19,7 @@ joy of Ruby programming!
 The Pi Edition of Minecraft needs to be running for the gem to make a connection. Then you can use Ruby
 code such as:
 ```
-require 'minecraft-pi-ruby'
+require 'minecraft-rb'
 
 Minecraft.world do
   say "Hello from Ruby!"
@@ -53,7 +54,7 @@ mc.say 'Now go and click on the TNT!'
 Assuming you have Ruby installed on your Raspberry Pi (Raspbian now comes with Ruby
 installed as it's needed for Sonic Pi), open a terminal and enter:
 
-`sudo gem install minecraft-pi-ruby` 
+`sudo gem install minecraft-rb`
 
 As ever, ensure you have the latest packages on your system.
 

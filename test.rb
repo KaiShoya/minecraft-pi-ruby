@@ -1,4 +1,4 @@
-require_relative "lib/minecraft-pi-ruby"
+require_relative "lib/minecraft-rb"
 
 mc = Minecraft.new
 

@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../lib/minecraft-pi-ruby'
+require_relative '../lib/minecraft-rb'
 require_relative '../lib/position'
 
 describe Minecraft do
