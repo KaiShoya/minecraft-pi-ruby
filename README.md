@@ -10,32 +10,32 @@ This is a Ruby gem to allow access to the Minecraft Pi Edition API from Ruby.
 The aim is that the syntax is clear for fledgling coders to read and
 understand as they work towards creating their own scripts.
 
-All the fun of Minecraft Pi Edition and all the goodness of Ruby! With Sonic Pi, 
-KidsRuby and now Minecraft, there really is no reason not to show you students the 
+All the fun of Minecraft Pi Edition and all the goodness of Ruby! With Sonic Pi,
+KidsRuby and now Minecraft, there really is no reason not to show you students the
 joy of Ruby programming!
 
 ##Introduction
-The Pi Edition of Minecraft needs to be running for the gem to make a connection. Then you can use Ruby 
+The Pi Edition of Minecraft needs to be running for the gem to make a connection. Then you can use Ruby
 code such as:
 ```
 require 'minecraft-pi-ruby'
 
 Minecraft.world do
   say "Hello from Ruby!"
-    
+
   position1 = Position.new(0,10,0)
   position2 = Position.new(10,20,10)
   make_cuboid(position1, position2, Block::DIAMOND_BLOCK)
   sleep 2
   make_cuboid(position1, position2, Block::AIR)
-  
+
   10.times do |counter|
     set_block(counter, 20, 0, Block::STONE)
     set_block(counter, 20, 9, Block::STONE)
     set_block(0, 20, counter, Block::STONE)
     set_block(9, 20, counter, Block::STONE)
   end
-  
+
   say "Bye from Ruby!"  
 end
 ```
@@ -50,15 +50,15 @@ mc.say 'Now go and click on the TNT!'
 ```
 ##Installation
 
-Assuming you have Ruby installed on your Raspberry Pi (Raspbian now comes with Ruby 
+Assuming you have Ruby installed on your Raspberry Pi (Raspbian now comes with Ruby
 installed as it's needed for Sonic Pi), open a terminal and enter:
 
 `sudo gem install minecraft-pi-ruby` 
 
-As ever, ensure you have the latest packages on your system. 
+As ever, ensure you have the latest packages on your system.
 
 So, if you have Sonic Pi installed then your Pi should be good to go. If not, why not? Open a terminal and enter
-`sudo apt-get update && sudo apt-get install sonic-pi` to install Sonic Pi and Ruby with it. You now have two reasons 
+`sudo apt-get update && sudo apt-get install sonic-pi` to install Sonic Pi and Ruby with it. You now have two reasons
 for learning Ruby!
 
 ##Usage
@@ -66,9 +66,9 @@ for learning Ruby!
 So far, only the following commands have been implemented
 
 - `say "message"` to display a message on the screen
-- `set_camera_mode` to either `:fixed`, `:normal` or `:follow` 
+- `set_camera_mode` to either `:fixed`, `:normal` or `:follow`
 - `set_block` takes 3 values for the x, y and z location, or a Position (`Position.new(x,y,z)`)
-- `set_blocks` is the same as `make_cuboid`. They take two positions and an ID for the block (see below), or 
+- `set_blocks` is the same as `make_cuboid`. They take two positions and an ID for the block (see below), or
 two sets of x,y,z coordinates followed by the block ID. For example: `make_cuboid(0,0,0,20,20,20,Block::OBSIDIAN)`.
 - `get_ground_height(x,z)` or just `ground_height(x,z)` return the height of the ground at the (x,z) location
 - `set_player_position(x,y,z)` or `set_player_position(Position)` moves the player to that position

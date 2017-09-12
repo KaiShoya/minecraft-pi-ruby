@@ -10,7 +10,7 @@ class Connection
       abort("#{$!}")
     end
   end
-  
+
   def send_command(command)
     if @socket
       @socket.puts command
@@ -18,14 +18,14 @@ class Connection
       puts "Not connected to Minecraft Pi!\n Is it running and are you in a live game?"
     end
   end
-  
+
   def send_with_response(command)
     send_command command
     retVal = @socket.gets.chomp
     return retVal
   end
-  
-  
+
+
   def Connection.finalize(id)
     @socket.close if @socket
   end
